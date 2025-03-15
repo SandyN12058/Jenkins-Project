@@ -7,7 +7,7 @@ services:
     ports:
       - "5000:5000"
     env_file:
-      - .env  # This ensures Docker loads variables from .env
+      - .env
     depends_on:
       - mongo
 
