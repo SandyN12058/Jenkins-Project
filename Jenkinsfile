@@ -58,7 +58,6 @@ pipeline {
             steps {
                 script {
                     sh "docker-compose up -d --remove-orphans"
-                    sleep(10)
                     sh "docker image prune -af --filter 'until=10m ago'"
                 }
             }
