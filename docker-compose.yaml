@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    image: ${BACKEND_IMAGE}
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-network
+    depends_on:
+      - mongodb
+
+  frontend:
+    image: ${FRONTEND_IMAGE}
+    ports:
+      - "5713:80"
+    networks:
+      - mern-network
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-network
+    volumes:
+      - mongo_data:/data/db
+
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+    driver: local
