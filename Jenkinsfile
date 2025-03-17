@@ -76,10 +76,6 @@ pipeline {
                     echo "🚀 Deploying containers..."
                     sh "docker-compose up -d --remove-orphans"
                     echo "✅ Deployment successful."
-
-                    echo "🧹 Cleaning up old images..."
-                    sh "docker image prune -af --filter 'until=10m ago'"
-                    echo "✅ Image cleanup completed."
                 }
             }
         }
