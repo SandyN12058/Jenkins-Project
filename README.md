@@ -11,7 +11,7 @@ This is a simple MERN stack project that implements basic CRUD (Create, Read, Up
 - React.js: Frontend library
 - Node.js: Runtime environment for server-side code
 
-## Pre-requisites
+## Prerequisites
 
 Make sure you have the following installed on your machine:
 
