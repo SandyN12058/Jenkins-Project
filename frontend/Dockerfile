@@ -1,5 +1,6 @@
 # frontend/Dockerfile
 
+# Stage 1: Build React App
 # Use the official Node.js image
 FROM node:18 as build
 
@@ -18,11 +19,15 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Use a lightweight server to serve the build
+
+# Stage 2: Serve with Nginx
 FROM nginx:alpine
 
 # Copy the build files to Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
+
+# Copy custom Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose the Nginx port
 EXPOSE 80
