@@ -8,7 +8,7 @@ const App = () => {
   const [userVariant, setUserVariant] = useState({ bool: true, id: "" });
   
   //  API URI's
-  const BASE_URL = window.location.hostname === "localhost"? "http://localhost:3000" : "";
+  const BASE_URL = window.location.hostname === "localhost"? "http://localhost:3000" : "/api";
   
   const getUsers = `${BASE_URL}/users`;
   const postUser = `${BASE_URL}/addUser`;
