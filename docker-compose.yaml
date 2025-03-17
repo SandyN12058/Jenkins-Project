@@ -13,7 +13,7 @@ services:
   frontend:
     image: ${FRONTEND_IMAGE}
     ports:
-      - "5713:80"
+      - "80:80"
     networks:
       - mern-network
 

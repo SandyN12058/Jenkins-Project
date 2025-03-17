@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+require('dotenv').config({ path: '../.env' });
+
 // const mongoURI = 'mongodb+srv://crudapp:crudapp@cluster0.iydyt0r.mongodb.net/?retryWrites=true&w=majority';
 const mongoURI = process.env.MONGO_URI;
 
