@@ -9,6 +9,8 @@ services:
       - mern-network
     depends_on:
       - mongodb
+    env_file:
+      - .env
 
   frontend:
     image: ${FRONTEND_IMAGE}
