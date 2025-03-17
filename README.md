@@ -17,10 +17,3 @@ Make sure you have the following installed on your machine:
 
 - Node.js and npm
 - MongoDB
-
-## Setup
-
-1. Clone the repository:
-
-   ```bash
-   gh repo clone Hayyanshaikh/mern-project   
