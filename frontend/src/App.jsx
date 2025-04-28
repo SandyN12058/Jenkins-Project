@@ -106,7 +106,7 @@ const App = () => {
   return (
     <div>
       <div className="container">
-        <h1>MERN Stack Project (CRUD) - Sandeep Naduvinmani</h1>
+        <h1>MERN Stack Project - Sandeep Naduvinmani</h1>
         <form onSubmit={handleAddUser}>
           <input
             type="text"
